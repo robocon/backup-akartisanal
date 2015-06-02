@@ -1077,6 +1077,14 @@ function custom_override_checkout_fields_date( $fields ) {
      return $fields;
 }
 
+/**
+ * Show date picker
+ */
+function deliverydate_datepicker(){
+    wp_enqueue_script( 'deliverydate-datepicker', get_template_directory_uri() . '/js/deliverydate-datepicker.js', array('jquery'));
+}
+add_action('shipping_deliverydate_datepicker', 'deliverydate_datepicker');
+
 
 /**
  * Update the order meta with field value

@@ -44,7 +44,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<?php endforeach; ?>
 
 			<?php do_action( 'woocommerce_after_checkout_shipping_form', $checkout ); ?>
-
+                        
+                        <?php 
+                        // Add date picker
+                        do_action('shipping_deliverydate_datepicker'); 
+                        ?>
 		</div>
 
 	<?php endif; ?>
